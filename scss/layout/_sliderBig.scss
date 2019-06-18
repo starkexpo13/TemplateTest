@@ -1,0 +1,29 @@
+.slider-header {
+  position: relative;
+  height: 480px;
+  grid-template-columns: auto auto;
+  padding-top: 80px;
+
+  &-bg {
+    background: $slider_header_bg;
+  }
+
+  &-title {
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 60px;
+    width: 360px;
+    height: 250px;
+  }
+
+  &-image {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  &-button {
+    width: 180px;
+    margin-top: -150px;
+    margin-left: 0;
+  }
+}

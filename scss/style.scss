@@ -1,0 +1,26 @@
+/*reset styles*/
+@import "base/reset";
+/*colors*/
+@import "helpers/variables";
+/*base*/
+@import "base/base";
+@import "layout/body";
+/*components*/
+@import "components/buttons";
+@import "components/inputs";
+/*layout*/
+@import "layout/header";
+@import "layout/sliderBig";
+@import "layout/card";
+@import "layout/carousel";
+@import "layout/press";
+@import "layout/news";
+@import "layout/sections";
+@import "layout/footer";
+/*media*/
+@import "helpers/tablet";
+@import "helpers/phones";
+
+.hide {
+  display: none;
+}

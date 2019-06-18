@@ -1,0 +1,79 @@
+.card {
+  &-block {
+    height: auto;
+    margin-top: -127px;
+    z-index: 2;
+    position: relative;
+  }
+
+  &-section {
+    list-style: none;
+    @include grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-column-gap: 20px;
+    grid-auto-rows: 300px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    & li a {
+      @include grid;
+      background: $card_bg;
+      padding: 30px;
+      @include shadowCard;
+      text-decoration: none;
+      border: none;
+      transition: all 350ms ease;
+      height: 240px;
+
+      & i {
+        font-size: 0.8rem;
+        color: $icon_color;
+      }
+
+      &:hover {
+        .replaced-svg path {
+          stroke: $btn_danger_text;
+        }
+
+        background: $color_success;
+
+        & p, h1, h2, h3, h4, h5, h6 {
+          color: $btn_danger_text;
+          opacity: 1;
+        }
+
+        & i {
+          color: $btn_danger_text;
+        }
+      }
+    }
+  }
+
+  &-image {
+    height: 90px;
+    padding-bottom: 30px;
+  }
+
+  &-title {
+    width: 100%;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 100;
+    text-align: left;
+    color: $body_text;
+  }
+
+  &-description {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 24px;
+    color: $body_text;
+    opacity: 0.4;
+  }
+}
+
+

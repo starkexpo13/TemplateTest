@@ -1,0 +1,150 @@
+.footer {
+  margin-bottom: -40px !important;
+  height: auto;
+  color: $btn_danger_text;
+
+  &-bg {
+    background: $footer_bg;
+  }
+
+  &-question-block {
+    @include grid;
+    height: auto;
+    grid-template-columns: 30% 60%;
+    grid-column-gap: 10%;
+    padding: 80px 0;
+
+    &-bg {
+      background: $quest_block;
+    }
+
+    &-title {
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: -1px;
+      color: $btn_danger_text;
+      font-weight: 200;
+      grid-column: 1;
+    }
+
+    &-description {
+      font-size: 14px;
+      line-height: 22px;
+      color: $text_footer;
+      font-weight: 100;
+      grid-column: 1;
+    }
+
+    &-form {
+      grid-column: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      @include grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-content: start;
+      grid-gap: 30px;
+
+      &-input {
+        display: block;
+        padding: 10px 10px 10px 0;
+        background: none !important;
+        box-shadow: none !important;
+        border: none;
+        font-size: 16px;
+        line-height: 24px;
+        color: $btn_danger_text;
+        font-weight: 100;
+        border-bottom: 1px solid $input_question_footer;
+        outline: 1px solid hsla(0, 0%, 100%, 0);
+
+        &-message {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+      }
+
+      &-info {
+        font-size: 12px;
+        line-height: 15px;
+        color: $btn_danger_text;
+        opacity: 0.5;
+      }
+
+      & button {
+        margin: 0;
+      }
+    }
+  }
+
+  &-block {
+    padding: 40px 0 20px 0;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 200;
+    height: auto;
+
+    & a {
+      color: $btn_danger_text;
+      text-decoration: none;
+      transition: all 350ms ease;
+
+      &:hover {
+        color: $color_success;
+      }
+    }
+
+    &-info {
+      @include grid;
+      grid-template-columns: repeat(5, auto);
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+
+    &-copyright {
+      @include grid;
+      justify-content: start;
+      align-content: center;
+      align-items: start;
+      grid-template-columns: 25% 65%;
+      color: $btn_danger_text;
+      opacity: 0.3;
+      height: 50px;
+      border-top: 1px solid $footer_info_border;
+
+      & a:hover {
+        color: $color_success;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-logo {
+    color: $btn_danger_text;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+    text-decoration: none;
+
+    & span {
+      color: $color_success;
+    }
+  }
+
+  &-address {
+    width: 170px;
+  }
+
+  &-link-maps {
+    grid-column: 2;
+    color: $text_footer !important;
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    transition: all 350ms ease;
+
+    &:hover {
+      color: $color_success !important;
+    }
+  }
+}

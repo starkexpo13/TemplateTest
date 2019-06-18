@@ -1,0 +1,39 @@
+body {
+  font-family: suisseInt, Verdana;
+  font-weight: 200;
+  color: $body_text;
+  background: $body_bg;
+
+  &::after {
+    content: "desktop";
+    font-size: 0;
+  }
+}
+
+
+.container {
+  @include grid;
+}
+
+.row {
+  display: inline-grid;
+  justify-content: start;
+}
+
+.center-block {
+  @include grid;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 923px;
+  height: 120px;
+}
+
+.hidden-xl {
+  display: none !important;
+}
+
+.replaced-svg {
+  width: auto;
+  height: auto;
+}
+

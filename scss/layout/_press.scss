@@ -1,0 +1,120 @@
+.press {
+  padding-top: 80px;
+  height: auto;
+
+  &-title {
+    color: $body_text;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: -1px;
+  }
+
+  &-date {
+    color: $press_date;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 100;
+    margin-top: 28px;
+    height: 30px;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $body_text;
+    font-weight: 100;
+    margin-top: -30px;
+  }
+
+  &-image {
+    height: auto;
+    max-height: 30px;
+  }
+
+  &-list {
+    list-style: none;
+    @include flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    padding: 0;
+    height: 200px;
+    margin-top: 40px;
+  }
+
+  &-item {
+    a {
+      @include flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      width: 180px;
+      height: 100%;
+      background: $press_item_bg;
+      text-decoration: none;
+      border: none;
+      padding: 0 12px;
+
+      &:hover {
+        background: $press_hover_bg;
+        color: $btn_danger_text;
+
+        & span, p {
+          color: $btn_danger_text;
+        }
+
+        .replaced-svg pattern {
+          fill: #333333;
+        }
+      }
+    }
+  }
+
+  &-pagination {
+    &-block {
+      @include flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 30px;
+
+      & a {
+        font-size: 2rem;
+        color: $body_text;
+
+        &:hover {
+          color: $color_success;
+        }
+
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    &-pages {
+      font-size: 16px;
+      line-height: 24px;
+      color: $body_text;
+    }
+  }
+
+  &-now-page {
+    color: $color_success;
+  }
+
+  &-all-page {
+    color: $body_text;
+  }
+}
+
+.komerss-img {
+  height: 12px;
+}
+
+.vcru {
+  height: 50px;
+}

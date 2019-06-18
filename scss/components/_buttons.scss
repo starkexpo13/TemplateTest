@@ -1,0 +1,58 @@
+.btn {
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  color: $button_text;
+  border: 1px solid $button_border;
+  font-size: 16px;
+  font-weight: 100;
+  width: auto;
+  height: 46px;
+  margin: 0 20px;
+  padding: 0 18px;
+  opacity: 1;
+  //@include border;
+  transition: all 250ms ease;
+  text-decoration: none;
+
+  &:hover {
+    border-color: $color_success;
+    color: $color_success;
+    text-decoration: none !important;
+    @include shadowButtonHover;
+  }
+}
+
+.btn-danger {
+  border-color: $btn_danger;
+  background-color: $btn_danger;
+  color: $btn_danger_text;
+
+  &:hover {
+    cursor: pointer;
+    color: $btn_danger_hover;
+    border-color: $btn_danger_hover;
+    @include shadowButtonHover;
+  }
+}
+
+.btn-dark {
+  background-color: $btn_dark;
+  color: $btn_danger_text;
+
+  &:hover {
+    background: $btn_dark_hover;
+    color: $btn_danger_text;
+    border-color: $btn_dark_hover;
+  }
+}
+
+.btn-radius {
+  border-radius: $button-radius;
+  -moz-border-radius: $button-radius;
+  -webkit-border-radius: $button-radius;
+  -o-border-radius: $button-radius;
+}

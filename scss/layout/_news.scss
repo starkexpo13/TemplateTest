@@ -1,0 +1,116 @@
+.news-block {
+  position: relative;
+  height: auto;
+  padding-bottom: 80px;
+
+  &-title {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 200;
+    letter-spacing: -1px;
+    color: $body_text;
+    padding-bottom: 30px;
+  }
+
+  &-date {
+    color: $press_date;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 100;
+    margin-top: 18px;
+    height: 30px;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $body_text;
+    font-weight: 100;
+    width: 100%;
+  }
+
+  &-link-all {
+    text-decoration: none;
+    color: $body_text;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    text-transform: uppercase;
+    right: 0;
+    top: 30px;
+
+    &:hover {
+      color: $color_success;
+    }
+  }
+
+  &-list {
+    list-style: none;
+    @include grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-column-gap: 20px;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    padding: 0;
+    height: 200px;
+  }
+
+  &-item {
+    a {
+      @include flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      position: relative;
+      height: 98%;
+      background: $news_item_bg;
+      text-decoration: none;
+      padding: 0 12px;
+      border: 1px solid $news_border;
+      border-bottom: 4px solid $news_item_bottom_line;
+
+      &:hover {
+        background: $press_hover_bg;
+        color: $btn_danger_text;
+
+        & i, .news-block-text, .news-block-date {
+          color: $btn_danger_text;
+        }
+      }
+    }
+  }
+
+  &-icon {
+    color: $news_icon;
+    position: absolute;
+    bottom: 12px;
+  }
+
+  &-backgrounds {
+    background-position: -80px -180px;
+    background-size: 190% auto;
+
+    & .news-block-icon {
+      color: $btn_danger_text;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background: $press_hover_bg !important;
+    }
+
+    & .news-block-text {
+      color: $btn_danger_text !important;
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 100;
+    }
+  }
+
+  &-pagination {
+    display: none;
+  }
+}

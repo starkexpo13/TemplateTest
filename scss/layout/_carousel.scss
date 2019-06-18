@@ -1,0 +1,125 @@
+.carousel {
+  &-block {
+    margin-top: 80px;
+    position: relative;
+    height: auto;
+  }
+
+  &-title {
+    color: $body_text;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    padding-bottom: 40px;
+  }
+
+  &-list {
+    list-style: none;
+    @include flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+  }
+
+  &-item {
+    a {
+      @include flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      width: 136px;
+      height: 180px;
+      background: $card_bg;
+      text-decoration: none;
+      border: none;
+      @include shadowCard;
+      border-radius: 2px;
+      transition: all 350ms ease;
+
+      &:hover {
+        .replaced-svg path {
+          stroke: $btn_danger_text;
+        }
+
+        background: $color_success;
+
+        & p, h1, h2, h3, h4, h5, h6 {
+          color: $btn_danger_text;
+          opacity: 1;
+        }
+      }
+    }
+
+    &-title {
+      width: calc(100% - 30px);
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      padding: 0 15px;
+      color: $body_text;
+      opacity: 0.4;
+    }
+
+    &-image {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &-link-all {
+    margin-left: auto;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    text-decoration: none;
+    color: $header_menu_info;
+
+    &:hover {
+      color: $color_success;
+    }
+  }
+
+  &-pagination {
+    &-block {
+      @include flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 30px;
+
+      & a {
+        font-size: 2rem;
+        color: $body_text;
+
+        &:hover {
+          color: $color_success;
+        }
+
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    &-pages {
+      font-size: 16px;
+      line-height: 24px;
+      color: $body_text;
+    }
+  }
+
+  &-now-page {
+    color: $color_success;
+  }
+
+  &-all-page {
+    color: $body_text;
+  }
+}
